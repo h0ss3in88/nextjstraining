@@ -1,0 +1,24 @@
+{
+  "name": "nextjstraining",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h0ss3in88/nextjstraining.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/h0ss3in88/nextjstraining/issues"
+  },
+  "homepage": "https://github.com/h0ss3in88/nextjstraining#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2"
+  }
+}
