@@ -18,12 +18,15 @@
         // components named with capitalized naming style
         // components should use like html tag 
         // header component 
-        function Header() {
-            return (<h1>Rocket To The Moon 🚀</h1>);
+        function Header({title}) {
+            // React 💙
+            // Rocket To The Moon 🚀
+            return (<h1>{title ? title : 'Rocket To The Moon 🚀'}</h1>);
         }
         // HomePage Component that uses Header Component (nest header component inside HomePage)
         function HomePage() {
             return (<div>
+                {/* <Header title="React 💙"/> */}
                 <Header />
             </div>);
         }
