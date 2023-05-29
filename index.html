@@ -24,13 +24,22 @@
             return (<h1>{title ? title : 'Rocket To The Moon 🚀'}</h1>);
         }
         // HomePage Component that uses Header Component (nest header component inside HomePage)
-        function HomePage() {
+        function HomePage({names}) {
+            console.log(names);
             return (<div>
                 {/* <Header title="React 💙"/> */}
                 <Header />
+                <ul>
+                    {
+                        names.map((name) => (
+                            <li key={name}>{name}</li>
+                        ))
+                    }
+                </ul>
             </div>);
         }
-        ReactDOM.render(<HomePage />, app);
+        let names = ["john","chris","james"];
+        ReactDOM.render(<HomePage names={names} />, app);
     </script>
 </body>
 </html>
