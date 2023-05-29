@@ -8,12 +8,12 @@
 </head>
 <body>
     <div id="app"></div>
-    <script type="text/javascript">
+    <script src="/client/react.development.js"></script>
+    <script src="/client/react-dom.development.js"></script>
+    <script src="/client/babel.min.js"></script>
+    <script type="text/jsx">
         let app = document.getElementById("app");
-        const header = document.createElement("h1");
-        const txt = document.createTextNode("Rocket To The Moon 🚀");
-        header.appendChild(txt);
-        app.appendChild(header);
+        ReactDOM.render(<h1>Rocket To The Moon 🚀</h1>, app);
     </script>
 </body>
 </html>
