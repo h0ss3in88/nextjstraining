@@ -13,7 +13,21 @@
     <script src="/client/babel.min.js"></script>
     <script type="text/jsx">
         let app = document.getElementById("app");
-        ReactDOM.render(<h1>Rocket To The Moon 🚀</h1>, app);
+        // add a react component 
+        // components in react are just a function that returns ui element in jsx form
+        // components named with capitalized naming style
+        // components should use like html tag 
+        // header component 
+        function Header() {
+            return (<h1>Rocket To The Moon 🚀</h1>);
+        }
+        // HomePage Component that uses Header Component (nest header component inside HomePage)
+        function HomePage() {
+            return (<div>
+                <Header />
+            </div>);
+        }
+        ReactDOM.render(<HomePage />, app);
     </script>
 </body>
 </html>
