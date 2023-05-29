@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/index.js",
+    "start": "node ./src/server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +20,9 @@
   "homepage": "https://github.com/h0ss3in88/nextjstraining#readme",
   "devDependencies": {
     "@faker-js/faker": "^8.0.2"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
   }
 }
