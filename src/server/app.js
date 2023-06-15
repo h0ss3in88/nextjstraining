@@ -2,17 +2,18 @@ const express = require("express");
 const logger =require("morgan");
 const path = require("path");
 const status = require("http-status");
+const cors = require("cors");
 const {routesSetup} = require("./routes");
 
 const initApp = function({repos}) {
     return new Promise((resolve,reject) => {
         let app = express();
         app.use(logger("dev"));
+        app.use(cors());
         app.use("/client",express.static(path.resolve(__dirname,"../","client")));
         app.use(express.json());
         app.get("/", (req,res) => {
-            // return res.sendFile(path.resolve(__dirname, "../../","index.html"));
-            return res.sendFile(path.resolve(__dirname,"../","client","app","home.html"));
+            return res.sendFile(path.resolve(__dirname, "../../","index.html"));
         });
         app.use((req,res,next) => {
            req.repos = repos;

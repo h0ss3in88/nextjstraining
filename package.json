@@ -20,7 +20,9 @@
   "homepage": "https://github.com/h0ss3in88/nextjstraining#readme",
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
+    "@types/cors": "^2.8.13",
     "@types/express-validator": "^3.0.0",
+    "@types/graphql": "^14.5.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "^20.2.5",
     "@types/react": "^18.2.7",
@@ -33,9 +35,12 @@
   },
   "dependencies": {
     "@databases/sqlite": "^4.0.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.1.3",
     "express": "^4.18.2",
     "express-validator": "^7.0.1",
+    "graphql": "^16.6.0",
+    "graphql-tools": "^9.0.0",
     "http-status": "^1.6.2",
     "morgan": "^1.10.0",
     "uuid": "^9.0.0",
