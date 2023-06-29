@@ -14,7 +14,7 @@ require('dotenv').config();
             let repos = {productRepo};
             initApp({ repos }).then(app => {
                 let server = createServer(app);
-                server.listen(3200, () => {
+                server.listen(process.env.PORT_NUMBER || 3200, () => {
                     console.log(`server is running at ${server.address().address}:${server.address().port}`);
                 });
             }).catch(error => {
