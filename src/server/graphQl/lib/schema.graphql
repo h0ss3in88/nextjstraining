@@ -1,0 +1,21 @@
+type Query {
+    getPing : PingPong,
+    greeting : String,
+    getPerson : Person
+    getProducts: [Product!]!
+}
+type PingPong {
+    ping : String
+}
+type Person {
+    first_name : String,
+    last_name: String
+}
+type Product {
+    id: Int!,
+    productId: String!,
+    name: String!,
+    description: String,
+    price: Float,
+    count: Int
+}

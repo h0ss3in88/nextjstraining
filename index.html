@@ -4,42 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/bootstrap/dist/css/bootstrap.css">
     <title>Training</title>
 </head>
 <body>
-    <div id="app"></div>
+    <div class="container" id="app">
+    </div>
+    <script src="/public/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/client/react.development.js"></script>
     <script src="/client/react-dom.development.js"></script>
     <script src="/client/babel.min.js"></script>
-    <script type="text/jsx">
-        let app = document.getElementById("app");
-        // add a react component 
-        // components in react are just a function that returns ui element in jsx form
-        // components named with capitalized naming style
-        // components should use like html tag 
-        // header component 
-        function Header({title}) {
-            // React 💙
-            // Rocket To The Moon 🚀
-            return (<h1>{title ? title : 'Rocket To The Moon 🚀'}</h1>);
-        }
-        // HomePage Component that uses Header Component (nest header component inside HomePage)
-        function HomePage({names}) {
-            console.log(names);
-            return (<div>
-                {/* <Header title="React 💙"/> */}
-                <Header />
-                <ul>
-                    {
-                        names.map((name) => (
-                            <li key={name}>{name}</li>
-                        ))
-                    }
-                </ul>
-            </div>);
-        }
-        let names = ["john","chris","james"];
-        ReactDOM.render(<HomePage names={names} />, app);
-    </script>
+    <script type="text/jsx" src="/client/app/homePage.js"></script>
 </body>
 </html>
